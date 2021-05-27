@@ -11,5 +11,11 @@ router.get('/users', (req, res) => {
   })
 })
 
+router.get('/delete', (req, res) => {
+  api.get(req.path).then(resp => {
+    res.send(resp.data)
+  })
+})
+
 
 module.exports = router
