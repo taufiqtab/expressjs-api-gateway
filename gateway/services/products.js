@@ -11,5 +11,11 @@ router.get('/products', (req, res) => {
   })
 })
 
+router.post('/products', (req, res) => {
+  api.post(req.path,req.body).then(resp => {
+    res.send(resp.data)
+  })
+})
+
 
 module.exports = router
